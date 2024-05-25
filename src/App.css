@@ -26,11 +26,13 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
+ol, ul, li, a{
 	list-style: none;
+
 }
 blockquote, q {
 	quotes: none;
+    
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -43,35 +45,104 @@ table {
 }
 
 /**------------------Reset----------------------**/
-
 body {
-    max-width: 980px;
-    margin: 0 auto;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("/public/Images/background_page.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
 
+header {
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 30px 0 30px;
+
+}
+
+img {
+    transition: width 3s, 
 }
 
 .navLink {
-    margin-top: 5px;
     display: flex;
-}
-.navLink li {
-    margin: 10px 10px 0 0;
+    align-items: center;
+    
 }
 
-.logo {
+.navLink li {
+    margin-right: 30px;
+    padding: 15px 5px;
+
+}
+.navLink li:hover {
+    margin-right: 30px;
+    padding: 15px 5px;
+    background-image: url("/public/Images/Icon_background_hover.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+
+}
+
+.sub ul{
+    display: none;
+}
+
+.navLink li, .navLink a {
     font-family: "Protest Revolution", sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btnContact, .btnContact a{
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background:none ;
+    border: none;
+    padding: 10px 0; 
+}
+
+.btnContact:hover {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background:none ;
+    border: none;
+    background-image: url("/public/Images/Icon_background_hover.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+/*.logo {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #fff;
-    background-image: url("/c/xampp/htdocs/React/portfolio/src/Images/background_icon.png");
+    background-image: url("/background_icon.png");
     border-radius: 5px;
     padding: 10px;
-    border: 1px solid peru;
     margin: 4px 0 40px 0;
     text-decoration: none;
+}*/
+
+Main {
+    max-width: 980px;
+    margin: 100px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+
 }
