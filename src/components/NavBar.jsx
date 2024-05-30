@@ -21,9 +21,9 @@ export default function NavBar() {
                     <li className="sub">
                         Social
                         <ul>
-                            <li>LinkIn</li>
-                            <li>Instagram</li>
-                            <li>Facebook</li>
+                            <li><a>LinkIn</a></li>
+                            <li><a>Instagram</a></li>
+                            <li><a>Facebook</a></li>
                         </ul>
                     </li>
                     <li className="sub">
