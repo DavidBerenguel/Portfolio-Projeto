@@ -60,7 +60,8 @@ header {
     display: flex;  
     align-items: center;
     justify-content: space-between;
-    margin: 15px 30px 0 30px;
+    padding: 15px 50px 15px 50px;
+
 }
 
 .navLink {
@@ -94,7 +95,7 @@ header {
 
 .navLink li, .navLink a {
     font-family: "Protest Revolution", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
@@ -102,7 +103,7 @@ header {
 
 .btnContact, .btnContact a{
     font-family: "Protest Revolution", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
@@ -113,7 +114,7 @@ header {
 
 .btnContact:hover {
     font-family: "Protest Revolution", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
@@ -127,25 +128,25 @@ header {
 
 /*-----Main-----*/
 
-Main {
-    max-width: 1000px;
-    margin: 100px auto;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+main div {
+    margin: 0 auto;
 
 }
 
 .divMain {
-    display:flex;
-    align-items:flex;
+    max-width: 65vw;
+    margin-top: 150px;
+    padding: 20px;
+    backdrop-filter: blur(3px);
+    border: 4px solid #000;
+    display: flex;
 }
 
 .tituloMain {
     font-family: "Protest Revolution", sans-serif;
-    font-size: 4rem;
-    text-transform: uppercase;
+    font-size: 3rem;
     color: #000;
-    margin-top: 70px;
+    line-height: 4rem;
 
 }
 
@@ -153,23 +154,150 @@ Main {
     font-family: "Protest Revolution", sans-serif;
     font-weight: bold;
     color: #000;
-    width: 600px;
-    font-size: 1.5rem;
-    margin-top: 40px;
-    text-align: justify;
+    width: 60vw;
+    font-size: 1.1rem;
+    margin-top: 80px;
+    word-spacing: 0.4rem;
     letter-spacing: 0.1rem ;
+    line-height: 2.5rem;
+
+}
+/*-----Main > Skills-----*/
+
+.divSkills {
+    max-width: 95vw;
 
 }
 
-/*.samuraiImg img {
-    margin-left: 50px;
-    width: 400px;
-    height:400px;
-}*/
-
 .tituloSkills {
     font-family: "Protest Revolution", sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #000;
-    margin-top: 100px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.skills {
+    display: flex;
+ 
+}
+
+.blockSkill {
+    margin-top: 8.854vw;
+    
+}
+
+.skills h3 {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+}
+.outerSkill {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.9),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.4);
+    /*background: conic-gradient(rgba(0, 0, 0, 0.8) 3.6deg, rgba(220, 220, 220, 0) 0deg );*/
+    
+}
+
+.circularProgress {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.6),
+                inset -6px -6px 10px 1px rgba(255, 255, 255, 0.4);
+    /*background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(3px);*/
+
+}
+
+.progressValue {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+path {
+    stroke: #000;
+    fill: none;
+    stroke-width: 20px;
+
+}
+
+/*-----Main > Contact-----*/
+.contactForm {
+    margin: 150px 100px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+form {
+    width: 43vw;
+    
+}
+
+.contactForm form h2 {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+    
+.inputsForm {
+    width: 30vw;
+    display: flex;
+}
+
+input {
+    width: 20vw;
+    height: 10vh;
+    margin: 4px 7px 4px 0;
+    border-radius: 5px;
+    border: 2px solid #000;
+    color:#000;
+    font-size: 1rem;
+    outline: none;
+    background: none;
+    backdrop-filter: blur(5px);
+    
+}
+
+::placeholder {
+    color: #000;
+    font-weight: bold;
+}
+
+textarea {
+    width: 40.9vw;
+    height: 25vh;
+    border-radius: 5px;
+    border: 2px solid #000;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    background: none;
+    backdrop-filter: blur(5px);
+
+}
+
+button {
+    width: 150px;
+    height: 60px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
 }
