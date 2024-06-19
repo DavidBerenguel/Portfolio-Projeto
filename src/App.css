@@ -47,7 +47,9 @@ table {
 
 /**------------------Reset----------------------**/
 body {
-    width: auto;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("/public/Images/background_page.jpg");
     background-repeat: no-repeat;
@@ -58,66 +60,53 @@ body {
 /*-----Header-----*/
 
 header {
+    width: 100vw;
     display: flex;  
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 50px 15px 50px;
-
-}
-
-.navLink {
-    display: flex;
-    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
     
 }
 
-.navLink li {
-    margin-right: 30px;
-    padding: 15px 5px;
-
+nav {
+    display: flex;
+    align-items: center;
 }
-.navLink li:hover {
-    margin-right: 30px;
-    padding: 15px 5px;
-    background-image: url("/public/Images/Icon_background_hover.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #fff;
+
+.navList {
+    display: flex;
 
 }
 
-.sub ul{
-    display: none;
+.navList li a, .navList li span {
+    margin-right: 40px;
 
 }
 
-.sub ul:hover {
-    display: block;
 
-}
-
-.navLink li, .navLink a {
+.navList li, .navList a {
     font-family: "Protest Revolution", sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
+    
+}
+
+.subList {
+    position:absolute;
+}
+
+.subList li {
+    margin-top: 15px;
+}
+
+li:hover, li a:hover {
+    color: #E11C23;
+    cursor: pointer;
 
 }
 
-.btnContact, .btnContact a{
-    font-family: "Protest Revolution", sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-    background:none ;
-    border: none;
-    padding: 10px 0; 
-
-}
-
-.btnContact:hover {
+.btnContact, .btnContact a {
     font-family: "Protest Revolution", sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -125,10 +114,13 @@ header {
     color: #fff;
     background:none ;
     border: none;
-    background-image: url("/public/Images/Icon_background_hover.png");
-    background-repeat: no-repeat;
-    background-position: center;
 
+}
+
+.btnContact a:hover {
+    font-family: "Protest Revolution", sans-serif;
+    color: #000;
+    cursor: pointer;
 }
 
 /*-----Main-----*/
@@ -139,8 +131,8 @@ main div {
 }
 
 #divMain {
-    max-width: 65vw;
-    margin-top: 150px;
+    width: 1000px;
+    margin-top: 160px;
     padding: 20px;
     backdrop-filter: blur(3px);
     border: 4px solid #000;
@@ -160,7 +152,7 @@ main div {
     font-family: "Protest Revolution", sans-serif;
     font-weight: bold;
     color: #000;
-    width: 60vw;
+    width: 950px;
     font-size: 1.1rem;
     margin-top: 80px;
     word-spacing: 0.4rem;
@@ -168,6 +160,7 @@ main div {
     line-height: 2.5rem;
 
 }
+
 /*-----Skills-----*/
 
 #divSkills {
@@ -176,7 +169,7 @@ main div {
 
 }
 
-.titleSkills {
+.title {
     display: flex;
     justify-content: center;
     font-family: "Protest Revolution", sans-serif;
@@ -184,29 +177,21 @@ main div {
     font-size: 4rem;
     letter-spacing: 0.1rem ;
     margin-bottom: 100px;
-
-}
-
-.titlesSkill {
-    margin: 0 auto 40px auto;
-    max-width: 1000px;
-    display: grid;
-    grid-template-columns: 445px 395px 100px;
-    padding-left: 55px;
 }
 
 .skills {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 300px;
-
+    
 }
 
 .titleSkill {
+    text-align: center;
     font-family: "Protest Revolution", sans-serif;
     color: #000;
     font-size: 2rem;
-    
+    margin-bottom: 20px;
 
 }
 
@@ -239,7 +224,7 @@ main div {
 
 }
 
-circle  {
+/*circle  {
     fill: none;
     stroke: #000;
     stroke-width: 30px;
@@ -253,7 +238,60 @@ circle  {
 
 @keyframes anim {
     100% {
-        stroke-dashoffset: 218.75; /* calculo: 625 - 625 x 0.65 <-- 0.65 é a percentagem de 65% do gráfico*/
+        stroke-dashoffset: 218.75; /* calculo: 625 - 625 x 0.65 <-- 0.65 é a percentagem de 65% do gráfico*
+    }
+}*/
+.htmlBar  {
+    fill: none;
+    stroke: #000;
+    stroke-width: 30px;
+    stroke-dasharray: 615px;
+    stroke-dashoffset: 615px;
+    animation: animHtml;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear ;
+}
+
+@keyframes animHtml {
+    100% {
+        stroke-dashoffset: 218.75; /* calculo: 615 - 615 x 0.65 <-- 0.65 é a percentagem de 65% do gráfico*/
+    }
+}
+
+.cssBar  {
+    fill: none;
+    stroke: #000;
+    stroke-width: 30px;
+    stroke-dasharray: 615px;
+    stroke-dashoffset: 615px;
+    animation: animCss;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear ;
+}
+
+@keyframes animCss {
+    100% {
+        stroke-dashoffset: 281.25; /* calculo: 615 - 615 x 0.55 <-- 0.55 é a percentagem de 55% do gráfico*/
+    }
+}
+
+.jsBar  {
+    fill: none;
+    stroke: #000;
+    stroke-width: 30px;
+    stroke-dasharray: 615px;
+    stroke-dashoffset: 615px;
+    animation: animJs;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear ;
+}
+
+@keyframes animJs {
+    100% {
+        stroke-dashoffset: 312.5; /* calculo: 615 - 615 x 0.50 <-- 0.50 é a percentagem de 50% do gráfico*/
     }
 }
 
@@ -273,7 +311,7 @@ svg{
 
 }
 
-/*-----Main > Contact-----*/
+/*-----Contact-----*/
 #contactForm {
     margin: 150px 30px 50px 30px;
     padding: 15px;
@@ -309,7 +347,7 @@ input {
     height: 10vh;
     margin: 4px 7px 4px 0;
     border-radius: 5px;
-    border: 2px solid #900;
+    border: 2px solid #E11C23;
     color:#000;
     font-size: 1rem;
     outline: none;
@@ -327,7 +365,7 @@ textarea {
     width: 40.9vw;
     height: 25vh;
     border-radius: 5px;
-    border: 2px solid #900;
+    border: 2px solid #E11C23;
     font-size: 1.2rem;
     margin-top: 10px;
     background: none;
@@ -343,7 +381,7 @@ textarea {
     border: none;
     font-size: 1rem;
     background-color: #111;
-    border: solid 3px #900;
+    border: solid 3px #E11C23;
     color: #fff;
 
 
@@ -359,3 +397,6 @@ textarea {
     width: 35vw;
 
 }
+
+/*-----Contact-----*/
+

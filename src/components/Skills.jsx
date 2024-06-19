@@ -1,68 +1,156 @@
 import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Skills() {
     
+    /*const [progressList, setProgressList] = useState([0, 0, 0]);
+    
+    useEffect(() => {
+        const interval = setInterval(() => {
+        console.log(progressList);
+            if(progressList[0] == 100 && progressList[1] == 100 && progressList[2] == 100){
+                return clearInterval(interval)
+            }
+            else{
+                setProgressList((currentState) => {
+                    const copy = [...currentState];
+                    copy[0] += 1;
+                    copy[1] += 1;
+                    copy[2] += 1;
+
+                    return copy;
+                });
+
+                /*setProgressList((progressList) => progressList.map( item => item + 1));
+            }
+
+        }, 30);
+
+        return () => clearInterval(interval)
+
+    },[])*/
+
+    const [progress1, setProgress1] = useState(0);
+    const [progress2, setProgress2] = useState(0);
+    const [progress3, setProgress3] = useState(0);
+    
+    useEffect(() => {
+        const interval = setInterval(() => {
+            
+            if(progress1 === 65){
+                return clearInterval(interval);
+            }
+
+            else{
+
+                setProgress1((progress1) => progress1 + 1);
+            }
+
+        }, 28);
+
+        return () => clearInterval(interval);
+
+    },[progress1]);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            
+            if(progress2 === 55){
+                return clearInterval(interval);
+            }
+
+            else{
+
+                setProgress2((progress2) => progress2 + 1);
+            }
+
+        }, 30);
+
+        return () => clearInterval(interval);
+
+    },[progress2]);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            
+            if(progress3 === 50){
+                return clearInterval(interval);
+            }
+
+            else{
+
+                setProgress3((progress3) => progress3 + 1);
+            }
+
+        }, 31);
+
+        return () => clearInterval(interval);
+
+    },[progress3]);
     
     return(
         
         <div id="divSkills" >
-            <h2 className="titleSkills" >Habilidades Técnicas</h2>
-            <div className="titlesSkill">
-                <h3 className="titleSkill" >HTML</h3>
-                <h3 className="titleSkill" >CSS</h3>
-                <h3 className="titleSkill" >JavaScript</h3>
-            </div>
+            <h2 className="title" >Habilidades Técnicas</h2>
             <div className="skills" >
-
-                <div className="blockSkills" >
-                    <div className="outerSkill">
-                        <div className="circularProgress" >
-                            <span className="progressValue">0%</span>
+                
+                <div>
+                    <h3 className="titleSkill" >HTML</h3>
+                    <div className="blockSkills" >
+                        <div className="outerSkill">
+                            <div className="circularProgress" >
+                                <span className="progressValue">{progress1}%</span>
+                            </div>
                         </div>
+                        {<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="240px" height="240px">
+                            <defs>
+                                <linearGradient id="GradientColor">
+                                <stop offset="0%" stopColor="#e91e63" />
+                                <stop offset="100%" stopColor="#673ab7" />
+                                </linearGradient>
+                            </defs>
+                            <circle className="htmlBar" cx="120" cy="120" r="95" strokeLinecap="round" />
+                        </svg>}
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="240px" height="240px">
-                        <defs>
-                            <linearGradient id="GradientColor">
-                            <stop offset="0%" stop-color="#e91e63" />
-                            <stop offset="100%" stop-color="#673ab7" />
-                            </linearGradient>
-                        </defs>
-                        <circle cx="120" cy="120" r="95" stroke-linecap="round" />
-                    </svg>
                 </div>
 
-                <div className="blockSkills">
-                    <div className="outerSkill">
-                        <div className="circularProgress" >
-                            <span className="progressValue">0%</span>
+                <div>
+                    <h3 className="titleSkill" >CSS</h3>
+                    <div className="blockSkills">
+                        <div className="outerSkill">
+                            <div className="circularProgress" >
+                                <span className="progressValue">{progress2}%</span>
+                            </div>
                         </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="250px" height="250px">
+                            <defs>
+                                <linearGradient id="GradientColor">
+                                <stop offset="0%" stopColor="#e91e63" />
+                                <stop offset="100%" stopColor="#673ab7" />
+                                </linearGradient>
+                            </defs>
+                            <circle className="cssBar" cx="120" cy="120" r="95" strokeLinecap="round" />
+                        </svg>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="250px" height="250px">
-                        <defs>
-                            <linearGradient id="GradientColor">
-                            <stop offset="0%" stop-color="#e91e63" />
-                            <stop offset="100%" stop-color="#673ab7" />
-                            </linearGradient>
-                        </defs>
-                        <circle cx="120" cy="120" r="95" stroke-linecap="round" />
-                    </svg>
                 </div>
-
-                <div className="blockSkills">
-                    <div className="outerSkill">
-                        <div className="circularProgress" >
-                            <span className="progressValue">0%</span>
+                <div>
+                    <h3 className="titleSkill" >JavaScript</h3>
+                    <div className="blockSkills">
+                        <div className="outerSkill">
+                            <div className="circularProgress" >
+                                <span className="progressValue">{progress3}%</span>
+                            </div>
                         </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="250px" height="250px">
+                            <defs>
+                                <linearGradient id="GradientColor">
+                                <stop offset="0%" stopColor="#e91e63" />
+                                <stop offset="100%" stopColor="#673ab7" />
+                                </linearGradient>
+                            </defs>
+                            <circle className="jsBar" cx="120" cy="120" r="95" strokeLinecap="round" />
+                        </svg>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="250px" height="250px">
-                        <defs>
-                            <linearGradient id="GradientColor">
-                            <stop offset="0%" stop-color="#e91e63" />
-                            <stop offset="100%" stop-color="#673ab7" />
-                            </linearGradient>
-                        </defs>
-                        <circle cx="120" cy="120" r="95" stroke-linecap="round" />
-                    </svg>
                 </div>
             </div>
         </div>
