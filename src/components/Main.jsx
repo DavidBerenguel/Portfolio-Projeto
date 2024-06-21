@@ -2,7 +2,7 @@ export default function Main() {
     
     return(
         <main>
-            <div id="divMain" >
+            <div id="about" >
                 <div>
                     <h2 className="tituloMain" >Olá!<br /> Sou o David Berenguel</h2>
                     <p className="mainText" >

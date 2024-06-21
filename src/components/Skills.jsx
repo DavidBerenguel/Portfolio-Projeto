@@ -1,34 +1,7 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function Skills() {
     
-    /*const [progressList, setProgressList] = useState([0, 0, 0]);
-    
-    useEffect(() => {
-        const interval = setInterval(() => {
-        console.log(progressList);
-            if(progressList[0] == 100 && progressList[1] == 100 && progressList[2] == 100){
-                return clearInterval(interval)
-            }
-            else{
-                setProgressList((currentState) => {
-                    const copy = [...currentState];
-                    copy[0] += 1;
-                    copy[1] += 1;
-                    copy[2] += 1;
-
-                    return copy;
-                });
-
-                /*setProgressList((progressList) => progressList.map( item => item + 1));
-            }
-
-        }, 30);
-
-        return () => clearInterval(interval)
-
-    },[])*/
 
     const [progress1, setProgress1] = useState(0);
     const [progress2, setProgress2] = useState(0);
@@ -90,7 +63,7 @@ export default function Skills() {
     
     return(
         
-        <div id="divSkills" >
+        <div id="skillsArea" >
             <h2 className="title" >Habilidades Técnicas</h2>
             <div className="skills" >
                 

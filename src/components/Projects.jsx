@@ -1,38 +1,41 @@
-export function Projects() {
+import { NavLink } from "react-router-dom";
+
+export default function Projects() {
     return (
-        <main>
-            <div>
-                <div>
-                    1
+        <div className="pageProjects">
+            <h2>Projetos</h2>
+            <div className="textProject">
+                <p>
+                Criar projetos como desenvolvedor web tem sido uma experiência extremamente enriquecedora. Desde a concepção inicial de ideias até a implementação de soluções complexas e escaláveis, cada projeto me proporciona um senso de realização imenso.
+                </p>
+            </div>
+            <NavLink to="https://github.com/DavidBerenguel" className="btnGit">O meu Git ➜</NavLink>
+            <div className="projects">
+                <div className="box1">
+                    
                 </div>
-                <div>
-                    2
+                <div className="box2">
+                    
                 </div>
-                <div>
-                    3
+                <div className="box3">
+                    
                 </div>
-                <div>
-                    4
+                <div className="box4">
+                    
                 </div>
-                <div>
-                    5
+                <div className="box5">
+                    
                 </div>
-                <div>
-                    6
+                <div className="box6">
+                    
                 </div>
-                <div>
-                    7
+                <div className="box7">
+                    
                 </div>
-                <div>
-                    8
-                </div>
-                <div>
-                    9
-                </div>
-                <div>
-                    10
+                <div className="box8">
+                    
                 </div>
             </div>
-        </main>
+        </div>
     );
 }

@@ -1,7 +1,7 @@
 export default function Contacts() {
 
     return (
-        <div id="contactForm">
+        <div id="contactME">
             <div className="contactImage">
                 <img src="Images/img_contact.png" alt="" />
             </div>
