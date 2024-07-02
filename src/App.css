@@ -17,7 +17,6 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    scroll-behavior: smooth;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -49,7 +48,6 @@ table {
 /**------------------Reset----------------------**/
 body {
     min-height: 100vh;
-    width: 100vw;
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("/public/Images/background_page.jpg");
@@ -58,11 +56,17 @@ body {
     
 }
 
+.App {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 /*-----Header-----*/
 
-header {
-    max-width: 100vw;
+#desktopNav {
+    max-width: 100%;
     display: flex;  
+    align-items: center;
     justify-content: space-around;
     margin-top: 30px;
     
@@ -72,14 +76,12 @@ i {
     color: #000;
 }
 
-nav {
+nav, .navList {
     display: flex;
-    align-items: center;
 }
 
 .navList {
-    display: flex;
-    margin-left: 200px;
+    align-items: center;
 }
 
 .navList li a, .navList li span {
@@ -94,11 +96,15 @@ nav {
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
-    
 }
 
-.contact {
-    margin-left: 350px;
+.contact a {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    
 }
 
 .subList {
@@ -118,14 +124,80 @@ nav {
 li:hover, li a:hover {
     color: #E11C23;
     cursor: pointer;
+    
+}
 
+/*-----Tablet header-----*/
+
+#mobileNav {
+    display: none;
+    width: 100%;
+    
+}
+
+.mobileDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobileDiv h1 {
+    position: relative;
+    top: 20px;
+}
+
+.hamburguerList {
+    position: relative;
+}
+
+.dropdownBars {
+    position: absolute;
+    top: 0;
+    right: 45px;
+}
+
+.menuLinks {
+    position: absolute;
+    top: 40px;
+    right: 5px;
+
+}
+
+.menuLinks li {
+    text-align: right;
+}
+
+.hamburguerList a, .hamburguerList li {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.linkedinIcon {
+    top: 100px;
+    left: 55px;
+}
+
+.instaIcon {
+    top: 100px;
+    left: 95px;
+}
+
+@media (max-width: 768px) {
+    #desktopNav {
+        display: none;
+    }
+
+    #mobileNav {
+        display: flex;
+    }
 }
 
 /*-----Main-----*/
-
-main div {
-    
-}
 
 #about {
     margin: 0 auto;
@@ -174,7 +246,7 @@ main div {
     color: #000;
     font-size: 4rem;
     letter-spacing: 0.1rem ;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 
 .skills {
@@ -188,7 +260,7 @@ main div {
     text-align: center;
     font-family: "Protest Revolution", sans-serif;
     color: #000;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 
 }
@@ -287,9 +359,26 @@ svg{
     top: 70px;
     left: 65px;
     font-family: "Protest Revolution", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #000;
 
+}
+
+/*-----Tablet Skills-----*/
+
+@media (max-width: 768px) {
+
+    .titleSkill {
+        margin: auto;
+    }
+    
+    .skills {
+        display: block;
+
+    }
+    .blockSkills {
+        margin: 40px auto;
+    }
 }
 
 /*-----Contact-----*/
@@ -304,10 +393,10 @@ svg{
 }
 
 form {
-    width: 41.3vw;
+    width: 708px;
     padding: 35px;
     border: solid 3px #000;
-    border-radius: 10px;
+    border-radius: 17px;
     
 }
 
@@ -319,16 +408,16 @@ form {
 }
     
 .inputsForm {
-    width: 30vw;
+    width: 321px;
     display: flex;
 
 }
 
 input {
-    width: 20vw;
-    min-height: 10vh;
+    width: 270px;
+    height: 70px;
     margin: 4px 7px 4px 0;
-    border-radius: 5px;
+    border-radius: 17px;
     border: 2px solid #E11C23;
     color:#000;
     font-size: 1rem;
@@ -344,9 +433,9 @@ input {
 }
 
 textarea {
-    width: 40.8vw;
-    min-height: 25vh;
-    border-radius: 5px;
+    width: 555px;
+    height: 170px;
+    border-radius: 15px;
     border: 2px solid #E11C23;
     font-size: 1.2rem;
     margin-top: 10px;
@@ -356,10 +445,10 @@ textarea {
 }
 
 .btnForm {
-    width: 10vw;
-    height: 9vh;
+    width: 100px;
+    height: 65px;
     margin-top: 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     border: none;
     font-size: 1.3rem;
     background-color: #111;
@@ -380,33 +469,73 @@ textarea {
 
 }
 
+/*-----Tablet Contacts-----*/
+
+@media (max-width: 768px) {
+    
+    .contactImage {
+        display: none;
+        
+    }
+
+    #contactME {
+        margin: 0 auto ;
+
+    }
+
+    form {
+        width: 100%;       
+    }
+
+    .inputsForm { 
+        width: 60vw;
+
+    }
+
+    input {
+        width: 40vw;
+      
+    }
+
+    textarea {
+        width: 82vw;
+    
+    }
+    
+    
+}
+
 /*-----Projects-----*/
 
 .pageProjects {
     max-width: 100vw;
     height: 100%;
-    margin-top: 100px;
-    position: relative;
-    
-}   
+    margin-top: 100px; 
+}
 
-.pageProjects h2 {
-    position: absolute;
-    top: 100px;
-    left: 280px;
+.projectContent {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.infoBlock {
+    height: 100%;
+}
+
+.infoBlock h2 {
     font-family: "Protest Revolution", sans-serif;
     font-size: 5rem;
     color: #000;
     line-height: 4rem;
+    margin: 100px 50px 100px 0;
+    text-align: center;
 }
 
 .textProject {
-    position: absolute;
-    top: 270px;
-    left: 80px;
     border: 4px solid #000;
     max-width: 700px;
     padding: 20px;
+    margin: 0 80px 30px 0;
     backdrop-filter: blur(3px);
     font-family: "Protest Revolution", sans-serif;
     font-weight: bold;
@@ -417,12 +546,10 @@ textarea {
     line-height: 2.5rem;
 }
 
-.pageProjects .btnGit {
-    position: absolute;
-    top: 570px;
-    left: 80px;
+.btnGit {
     width: 120px;
     height: 50px;
+    padding: 10px;
     border: 3px solid #000;
     border-radius: 20px;
     line-height: 50px;
@@ -439,11 +566,14 @@ textarea {
 }
 
 .projects {
-    width: 100vw;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    gap: 10px;
 }
 
 .projects div {
-    position: absolute;
+    min-height: 200px;
     border: 2px solid #000;
     border-radius: 20px;
     background-repeat: no-repeat;
@@ -456,79 +586,139 @@ textarea {
     border: 4px solid #000;
 }
 
-.projects div:active {
-    border: 4px solid #f00;
-    
-}
 
 .box1 {
-    width: 230px;
-    min-height: 215px;
-    top: 0;
-    left: 1050px;
     background: url('/public/Images/box1.jpg');
-
+    grid-column: 1 / 2;
 }
 
 .box2 {
-    width: 230px;
-    min-height: 215px;
-    top: 0;
-    left: 1290px;
     background: url('/public/Images/box2.jpg');
+    grid-column: 2 / 3;
 
 }
 
 .box3 {
-    width: 230px;
-    min-height: 215px;
-    top: 0;
-    left: 1530px;
     background: url('/public/Images/box3.jpg');
+    grid-column: 3 / 4;
 
 }
 
 .box4 {
-    width: 450px;
-    min-height: 230px;
-    top: 225px;
-    left: 985px;
     background: url('/public/Images/box4.gif');
-
+    grid-column: 1 / 3;
 }
 
 .box5 {
-    width: 250px;
-    min-height: 230px;
-    top: 225px;
-    left: 1445px;
     background: url('/public/Images/box5.jpg');
+    grid-column: 3 / 4;
 
 }
 
 .box6 {
-    width: 230px;
-    min-height: 230px;
-    top: 465px;
-    left: 1050px;
     background: url('/public/Images/box6.jpg');
+    grid-column: 1 / 2;
 
 }
 
 .box7 {
-    width: 230px;
-    min-height: 230px;
-    top: 465px;
-    left: 1290px;
     background: url('/public/Images/box7.jpg');
+    grid-column: 2 / 3;
 
 }
 
 .box8 {
-    width: 230px;
-    min-height: 230px;
-    top: 465px;
-    left: 1530px;
     background: url('/public/Images/box8.jpg');
+    grid-column: 3 / 4;
+
+}
+
+/*-----Mobile Projects-----*/
+
+@media (max-width: 768px) {
+
+
+    .projectContent {
+        display: block;
+    }
+    
+    .infoBlock h2 {
+        margin: 150px auto 100px auto;
+    }
+    
+    .textProject {
+        margin: 0 auto 30px auto;
+    }
+
+    .textProject p {
+        text-align: center;
+    }
+    
+    .btnGit {
+        margin-left: 324px;
+    }
+    
+    .projects {
+        margin: 50px 0;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px;
+        gap: 10px;
+    }
+    
+    .projects div {
+        border: 2px solid #000;
+        border-radius: 20px;
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+    }
+    
+    .box1 {
+        background: url('/public/Images/box1.jpg');
+        grid-column: 1 / 2;
+    }
+    
+    .box2 {
+        background: url('/public/Images/box2.jpg');
+        grid-column: 2 / 3;
+    
+    }
+    
+    .box3 {
+        background: url('/public/Images/box3.jpg');
+        grid-column: 3 / 4;
+    
+    }
+    
+    .box4 {
+        background: url('/public/Images/box4.gif');
+        grid-column: 1 / 3;
+    }
+    
+    .box5 {
+        background: url('/public/Images/box5.jpg');
+        grid-column: 3 / 4;
+    
+    }
+    
+    .box6 {
+        background: url('/public/Images/box6.jpg');
+        grid-column: 1 / 2;
+    
+    }
+    
+    .box7 {
+        background: url('/public/Images/box7.jpg');
+        grid-column: 2 / 3;
+    
+    }
+    
+    .box8 {
+        background: url('/public/Images/box8.jpg');
+        grid-column: 3 / 4;
+    
+    }
 
 }

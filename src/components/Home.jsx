@@ -5,7 +5,7 @@ import Contacts from "./Contacts";
 export default function Home() {
 
     return(
-        <div>
+        <div >
             <Main />
             <Skills />
             <Contacts />
