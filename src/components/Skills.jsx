@@ -75,7 +75,7 @@ export default function Skills() {
                                 <span className="progressValue">{progress1}%</span>
                             </div>
                         </div>
-                        {<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="240px" height="240px">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="240px" height="240px">
                             <defs>
                                 <linearGradient id="GradientColor">
                                 <stop offset="0%" stopColor="#e91e63" />
@@ -83,7 +83,7 @@ export default function Skills() {
                                 </linearGradient>
                             </defs>
                             <circle className="htmlBar" cx="120" cy="120" r="95" strokeLinecap="round" />
-                        </svg>}
+                        </svg>
                     </div>
                 </div>
 

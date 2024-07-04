@@ -57,7 +57,7 @@ body {
 }
 
 .App {
-    max-width: 1280px;
+    max-width: 1800px;
     margin: 0 auto;
 }
 
@@ -67,7 +67,7 @@ body {
     max-width: 100%;
     display: flex;  
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-between;
     margin-top: 30px;
     
 }
@@ -85,7 +85,7 @@ nav, .navList {
 }
 
 .navList li a, .navList li span {
-    margin-right: 40px;
+    margin-right: 55px;
 
 }
 
@@ -132,6 +132,7 @@ li:hover, li a:hover {
 #mobileNav {
     display: none;
     width: 100%;
+
     
 }
 
@@ -149,6 +150,7 @@ li:hover, li a:hover {
 
 .hamburguerList {
     position: relative;
+    z-index: 999;
 }
 
 .dropdownBars {
@@ -166,6 +168,8 @@ li:hover, li a:hover {
 
 .menuLinks li {
     text-align: right;
+    margin-top: 14px;
+    
 }
 
 .hamburguerList a, .hamburguerList li {
@@ -177,17 +181,19 @@ li:hover, li a:hover {
     
 }
 
+
+
 .linkedinIcon {
-    top: 100px;
+    top: 160px;
     left: 55px;
 }
 
 .instaIcon {
-    top: 100px;
+    top: 160px;
     left: 95px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px)  {
     #desktopNav {
         display: none;
     }
@@ -197,12 +203,23 @@ li:hover, li a:hover {
     }
 }
 
+/*-----Mobile header-----*/
+
+
+
+@media (max-width: 425)  {
+    /* 
+    Quero adicionar um novo menu de links para o mobile query
+    
+    */
+}
+
 /*-----Main-----*/
 
 #about {
     margin: 0 auto;
     max-width: 1000px;
-    margin-top: 160px;
+    margin-top: 140px;
     padding: 30px;
     backdrop-filter: blur(3px);
     border: 4px solid #000;
@@ -210,11 +227,12 @@ li:hover, li a:hover {
 
 }
 
-.tituloMain {
+.titleMain {
     font-family: "Protest Revolution", sans-serif;
     font-size: 3rem;
     color: #000;
     line-height: 4rem;
+    text-align: left;
 
 }
 
@@ -223,6 +241,7 @@ li:hover, li a:hover {
     font-weight: bold;
     color: #000;
     width: 100%;
+    text-align: left;
     font-size: 1.1rem;
     margin-top: 80px;
     word-spacing: 0.4rem;
@@ -231,6 +250,23 @@ li:hover, li a:hover {
 
 }
 
+/*-----Mobile Main-----*/
+
+@media (max-width: 425px) {
+
+    #about {
+        /*margin-top: 230px;*/
+    }
+
+    .titleMain {
+        text-align: center;
+    }
+
+    .mainText {
+        text-align: center;
+    }
+
+}
 /*-----Skills-----*/
 
 #skillsArea {
@@ -381,6 +417,15 @@ svg{
     }
 }
 
+/*-----Mobile Skills-----*/
+
+@media (max-width: 425px) {
+
+    .title {
+        text-align: center;
+    }
+    
+}
 /*-----Contact-----*/
 
 #contactME {
@@ -393,11 +438,10 @@ svg{
 }
 
 form {
-    width: 708px;
+    width: 558px;
     padding: 35px;
     border: solid 3px #000;
     border-radius: 17px;
-    
 }
 
 #contactME form h2 {
@@ -408,15 +452,14 @@ form {
 }
     
 .inputsForm {
-    width: 321px;
+    max-width: 321px;
     display: flex;
-
 }
 
 input {
-    width: 270px;
+    width: 262px;
     height: 70px;
-    margin: 4px 7px 4px 0;
+    margin: 4px 18px 4px 0;
     border-radius: 17px;
     border: 2px solid #E11C23;
     color:#000;
@@ -433,12 +476,13 @@ input {
 }
 
 textarea {
-    width: 555px;
+    width: 550px;
     height: 170px;
     border-radius: 15px;
     border: 2px solid #E11C23;
     font-size: 1.2rem;
     margin-top: 10px;
+    margin-right: 50px;
     background: none;
     backdrop-filter: blur(5px);
 
@@ -479,42 +523,78 @@ textarea {
     }
 
     #contactME {
-        margin: 0 auto ;
+        margin: 0 0 20px 0;
+        padding: 0;
 
     }
 
     form {
-        width: 100%;       
+        width: 100%;
+        padding: 20px;
     }
 
-    .inputsForm { 
-        width: 60vw;
+    #contactME form h2 {
+        text-align: center;
+
+    }
+
+    .inputsForm, .btnForm {
+        margin-left: 20px;
 
     }
 
     input {
-        width: 40vw;
-      
+        width: 307px;
+                
     }
 
     textarea {
-        width: 82vw;
+        width: 640px;
+        margin-left: 20px;
     
-    }
-    
+    }  
     
 }
 
+/*-----Mobile Contacts-----*/
+
+@media (max-width: 425px) {
+
+    #contactME {
+        margin: -80px 0 30px 0;
+        padding: 0;
+
+    }
+
+    form {
+        padding: 20px 0;     
+    }
+
+    #contactME form h2 {
+        text-align: center;
+
+    }
+
+    input {
+        width: 175px;
+    }
+
+    textarea {
+        width: 375px;
+        margin: 5px 0 0 20px;
+    
+    }
+}
 /*-----Projects-----*/
 
 .pageProjects {
-    max-width: 100vw;
     height: 100%;
     margin-top: 100px; 
 }
 
 .projectContent {
     display: flex;
+    justify-content: space-evenly;
     margin-bottom: 30px;
 }
 
@@ -527,7 +607,7 @@ textarea {
     font-size: 5rem;
     color: #000;
     line-height: 4rem;
-    margin: 100px 50px 100px 0;
+    margin: 100px 40px 100px 0;
     text-align: center;
 }
 
@@ -535,7 +615,7 @@ textarea {
     border: 4px solid #000;
     max-width: 700px;
     padding: 20px;
-    margin: 0 80px 30px 0;
+    margin: 0 80px 60px 0;
     backdrop-filter: blur(3px);
     font-family: "Protest Revolution", sans-serif;
     font-weight: bold;
@@ -546,10 +626,15 @@ textarea {
     line-height: 2.5rem;
 }
 
+.textProject p {
+    text-align:center;
+}
+
 .btnGit {
     width: 120px;
     height: 50px;
     padding: 10px;
+    
     border: 3px solid #000;
     border-radius: 20px;
     line-height: 50px;
@@ -573,7 +658,6 @@ textarea {
 }
 
 .projects div {
-    min-height: 200px;
     border: 2px solid #000;
     border-radius: 20px;
     background-repeat: no-repeat;
@@ -633,7 +717,7 @@ textarea {
 
 }
 
-/*-----Mobile Projects-----*/
+/*-----Tablet Projects-----*/
 
 @media (max-width: 768px) {
 
@@ -677,47 +761,133 @@ textarea {
     
     .box1 {
         background: url('/public/Images/box1.jpg');
+        grid-column: 1 / 3;
+    }
+    
+    .box2 {
+        background: url('/public/Images/box2.jpg');
+        grid-column: 3 / 4;
+    
+    }
+    
+    .box3 {
+        background: url('/public/Images/box3.jpg');
+        grid-column: 1 / 2;
+    
+    }
+    
+    .box4 {
+        background: url('/public/Images/box4.gif');
+        grid-column: 2 / 4;
+    }
+    
+    .box5 {
+        background: url('/public/Images/box5.jpg');
+        grid-column: 1 / 2;
+    
+    }
+    
+    .box6 {
+        background: url('/public/Images/box6.jpg');
+        grid-column: 2 / 3;
+    
+    }
+    
+    .box7 {
+        background: url('/public/Images/box7.jpg');
+        grid-column: 3 / 4;
+    
+    }
+    
+    .box8 {
+        background: url('/public/Images/box8.jpg');
+        grid-column: 1 / 4;
+    
+    }
+
+}
+
+/*-----Mobile Projects-----*/
+
+@media (max-width: 425px) {
+
+    .infoBlock h2 {
+        margin: 200px 0 0 0;
+    }
+    
+    .textProject {
+        margin: 50px 0 30px 0;
+    }
+
+    .btnGit {
+        margin: 0 60px;
+        padding: 10px 100px;
+
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 50px 50px 50px 50px;
+        align-items: center;
+        justify-items: center;
+        gap: 8px;
+    }
+
+    .projects div {
+        width: 200px;
+        height: 50px;
+    }
+
+    .projects div:hover {
+        width: 250px;
+        height: 200px;
+        z-index: 999;
+        position: absolute;
+    }
+
+    .box1 {
+        background: url('/public/Images/box1.jpg');
         grid-column: 1 / 2;
     }
     
     .box2 {
         background: url('/public/Images/box2.jpg');
         grid-column: 2 / 3;
-    
     }
     
     .box3 {
         background: url('/public/Images/box3.jpg');
-        grid-column: 3 / 4;
-    
+        grid-column: 1 / 2;
     }
     
     .box4 {
         background: url('/public/Images/box4.gif');
-        grid-column: 1 / 3;
+        grid-column: 2 / 3;
+
     }
     
     .box5 {
         background: url('/public/Images/box5.jpg');
-        grid-column: 3 / 4;
+        grid-column: 1 / 2;
     
     }
     
     .box6 {
         background: url('/public/Images/box6.jpg');
-        grid-column: 1 / 2;
+        grid-column: 2 / 3;
     
     }
     
     .box7 {
         background: url('/public/Images/box7.jpg');
-        grid-column: 2 / 3;
+        grid-column: 1 / 2;
     
     }
     
     .box8 {
         background: url('/public/Images/box8.jpg');
-        grid-column: 3 / 4;
+        grid-column: 2 / 3;
     
     }
 
